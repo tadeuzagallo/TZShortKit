@@ -21,6 +21,7 @@
 		5C22343117EB7CBC00BCA494 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C22342917EB7CBC00BCA494 /* Default.png */; };
 		5C22343217EB7CBC00BCA494 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C22342A17EB7CBC00BCA494 /* Default@2x.png */; };
 		5C22343317EB7CBC00BCA494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C22342B17EB7CBC00BCA494 /* InfoPlist.strings */; };
+		5C22343D17EB7D0F00BCA494 /* UIImage+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		5C22342C17EB7CBC00BCA494 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C22342D17EB7CBC00BCA494 /* TZShortKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TZShortKit-Info.plist"; sourceTree = "<group>"; };
 		5C22343717EB7CD900BCA494 /* TZShortKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZShortKit.h; sourceTree = "<group>"; };
+		5C22343B17EB7D0F00BCA494 /* UIImage+TZShortKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TZShortKit.h"; sourceTree = "<group>"; };
+		5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TZShortKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 		5C22343617EB7CCA00BCA494 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				5C22343B17EB7D0F00BCA494 /* UIImage+TZShortKit.h */,
+				5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			files = (
 				5C22342E17EB7CBC00BCA494 /* main.m in Sources */,
 				5C22342F17EB7CBC00BCA494 /* TZAppDelegate.m in Sources */,
+				5C22343D17EB7D0F00BCA494 /* UIImage+TZShortKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
