@@ -10,5 +10,6 @@
 #define TZShortKit_TZShortKit_h
 
 #import "UIImage+TZShortKit.h"
+#import "UIView+TZShortKit.h"
 
 #endif
