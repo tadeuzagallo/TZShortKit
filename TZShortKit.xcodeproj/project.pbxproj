@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C2233EE17EB7C3F00BCA494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2233ED17EB7C3F00BCA494 /* UIKit.framework */; };
+		5C2233F017EB7C3F00BCA494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2233EF17EB7C3F00BCA494 /* Foundation.framework */; };
+		5C2233F217EB7C3F00BCA494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2233F117EB7C3F00BCA494 /* CoreGraphics.framework */; };
+		5C2233F817EB7C3F00BCA494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C2233F617EB7C3F00BCA494 /* InfoPlist.strings */; };
+		5C2233FA17EB7C3F00BCA494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2233F917EB7C3F00BCA494 /* main.m */; };
+		5C2233FE17EB7C3F00BCA494 /* TZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2233FD17EB7C3F00BCA494 /* TZAppDelegate.m */; };
+		5C22340017EB7C3F00BCA494 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2233FF17EB7C3F00BCA494 /* Default.png */; };
+		5C22340217EB7C3F00BCA494 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C22340117EB7C3F00BCA494 /* Default@2x.png */; };
+		5C22340417EB7C3F00BCA494 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C22340317EB7C3F00BCA494 /* Default-568h@2x.png */; };
+		5C22340C17EB7C4000BCA494 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C22340B17EB7C4000BCA494 /* SenTestingKit.framework */; };
+		5C22340D17EB7C4000BCA494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2233ED17EB7C3F00BCA494 /* UIKit.framework */; };
+		5C22340E17EB7C4000BCA494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2233EF17EB7C3F00BCA494 /* Foundation.framework */; };
+		5C22341617EB7C4000BCA494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C22341417EB7C4000BCA494 /* InfoPlist.strings */; };
+		5C22341917EB7C4000BCA494 /* TZShortKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C22341817EB7C4000BCA494 /* TZShortKitTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C22340F17EB7C4000BCA494 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C2233E217EB7C3F00BCA494 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C2233E917EB7C3F00BCA494;
+			remoteInfo = TZShortKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C2233EA17EB7C3F00BCA494 /* TZShortKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TZShortKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2233ED17EB7C3F00BCA494 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5C2233EF17EB7C3F00BCA494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5C2233F117EB7C3F00BCA494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5C2233F517EB7C3F00BCA494 /* TZShortKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TZShortKit-Info.plist"; sourceTree = "<group>"; };
+		5C2233F717EB7C3F00BCA494 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C2233F917EB7C3F00BCA494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C2233FB17EB7C3F00BCA494 /* TZShortKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TZShortKit-Prefix.pch"; sourceTree = "<group>"; };
+		5C2233FC17EB7C3F00BCA494 /* TZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZAppDelegate.h; sourceTree = "<group>"; };
+		5C2233FD17EB7C3F00BCA494 /* TZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZAppDelegate.m; sourceTree = "<group>"; };
+		5C2233FF17EB7C3F00BCA494 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5C22340117EB7C3F00BCA494 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5C22340317EB7C3F00BCA494 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5C22340A17EB7C4000BCA494 /* TZShortKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TZShortKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C22340B17EB7C4000BCA494 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5C22341317EB7C4000BCA494 /* TZShortKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TZShortKitTests-Info.plist"; sourceTree = "<group>"; };
+		5C22341517EB7C4000BCA494 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C22341717EB7C4000BCA494 /* TZShortKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZShortKitTests.h; sourceTree = "<group>"; };
+		5C22341817EB7C4000BCA494 /* TZShortKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TZShortKitTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C2233E717EB7C3F00BCA494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2233EE17EB7C3F00BCA494 /* UIKit.framework in Frameworks */,
+				5C2233F017EB7C3F00BCA494 /* Foundation.framework in Frameworks */,
+				5C2233F217EB7C3F00BCA494 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C22340617EB7C4000BCA494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C22340C17EB7C4000BCA494 /* SenTestingKit.framework in Frameworks */,
+				5C22340D17EB7C4000BCA494 /* UIKit.framework in Frameworks */,
+				5C22340E17EB7C4000BCA494 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C2233E117EB7C3F00BCA494 = {
+			isa = PBXGroup;
+			children = (
+				5C2233F317EB7C3F00BCA494 /* TZShortKit */,
+				5C22341117EB7C4000BCA494 /* TZShortKitTests */,
+				5C2233EC17EB7C3F00BCA494 /* Frameworks */,
+				5C2233EB17EB7C3F00BCA494 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C2233EB17EB7C3F00BCA494 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C2233EA17EB7C3F00BCA494 /* TZShortKit.app */,
+				5C22340A17EB7C4000BCA494 /* TZShortKitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C2233EC17EB7C3F00BCA494 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C2233ED17EB7C3F00BCA494 /* UIKit.framework */,
+				5C2233EF17EB7C3F00BCA494 /* Foundation.framework */,
+				5C2233F117EB7C3F00BCA494 /* CoreGraphics.framework */,
+				5C22340B17EB7C4000BCA494 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C2233F317EB7C3F00BCA494 /* TZShortKit */ = {
+			isa = PBXGroup;
+			children = (
+				5C2233FC17EB7C3F00BCA494 /* TZAppDelegate.h */,
+				5C2233FD17EB7C3F00BCA494 /* TZAppDelegate.m */,
+				5C2233F417EB7C3F00BCA494 /* Supporting Files */,
+			);
+			path = TZShortKit;
+			sourceTree = "<group>";
+		};
+		5C2233F417EB7C3F00BCA494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C2233F517EB7C3F00BCA494 /* TZShortKit-Info.plist */,
+				5C2233F617EB7C3F00BCA494 /* InfoPlist.strings */,
+				5C2233F917EB7C3F00BCA494 /* main.m */,
+				5C2233FB17EB7C3F00BCA494 /* TZShortKit-Prefix.pch */,
+				5C2233FF17EB7C3F00BCA494 /* Default.png */,
+				5C22340117EB7C3F00BCA494 /* Default@2x.png */,
+				5C22340317EB7C3F00BCA494 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C22341117EB7C4000BCA494 /* TZShortKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C22341717EB7C4000BCA494 /* TZShortKitTests.h */,
+				5C22341817EB7C4000BCA494 /* TZShortKitTests.m */,
+				5C22341217EB7C4000BCA494 /* Supporting Files */,
+			);
+			path = TZShortKitTests;
+			sourceTree = "<group>";
+		};
+		5C22341217EB7C4000BCA494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C22341317EB7C4000BCA494 /* TZShortKitTests-Info.plist */,
+				5C22341417EB7C4000BCA494 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C2233E917EB7C3F00BCA494 /* TZShortKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C22341C17EB7C4000BCA494 /* Build configuration list for PBXNativeTarget "TZShortKit" */;
+			buildPhases = (
+				5C2233E617EB7C3F00BCA494 /* Sources */,
+				5C2233E717EB7C3F00BCA494 /* Frameworks */,
+				5C2233E817EB7C3F00BCA494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TZShortKit;
+			productName = TZShortKit;
+			productReference = 5C2233EA17EB7C3F00BCA494 /* TZShortKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C22340917EB7C4000BCA494 /* TZShortKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C22341F17EB7C4000BCA494 /* Build configuration list for PBXNativeTarget "TZShortKitTests" */;
+			buildPhases = (
+				5C22340517EB7C4000BCA494 /* Sources */,
+				5C22340617EB7C4000BCA494 /* Frameworks */,
+				5C22340717EB7C4000BCA494 /* Resources */,
+				5C22340817EB7C4000BCA494 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C22341017EB7C4000BCA494 /* PBXTargetDependency */,
+			);
+			name = TZShortKitTests;
+			productName = TZShortKitTests;
+			productReference = 5C22340A17EB7C4000BCA494 /* TZShortKitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C2233E217EB7C3F00BCA494 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TZ;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Tadeu Zagallo";
+			};
+			buildConfigurationList = 5C2233E517EB7C3F00BCA494 /* Build configuration list for PBXProject "TZShortKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5C2233E117EB7C3F00BCA494;
+			productRefGroup = 5C2233EB17EB7C3F00BCA494 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C2233E917EB7C3F00BCA494 /* TZShortKit */,
+				5C22340917EB7C4000BCA494 /* TZShortKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C2233E817EB7C3F00BCA494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2233F817EB7C3F00BCA494 /* InfoPlist.strings in Resources */,
+				5C22340017EB7C3F00BCA494 /* Default.png in Resources */,
+				5C22340217EB7C3F00BCA494 /* Default@2x.png in Resources */,
+				5C22340417EB7C3F00BCA494 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C22340717EB7C4000BCA494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C22341617EB7C4000BCA494 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C22340817EB7C4000BCA494 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C2233E617EB7C3F00BCA494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2233FA17EB7C3F00BCA494 /* main.m in Sources */,
+				5C2233FE17EB7C3F00BCA494 /* TZAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C22340517EB7C4000BCA494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C22341917EB7C4000BCA494 /* TZShortKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C22341017EB7C4000BCA494 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C2233E917EB7C3F00BCA494 /* TZShortKit */;
+			targetProxy = 5C22340F17EB7C4000BCA494 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C2233F617EB7C3F00BCA494 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C2233F717EB7C3F00BCA494 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5C22341417EB7C4000BCA494 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C22341517EB7C4000BCA494 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C22341A17EB7C4000BCA494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C22341B17EB7C4000BCA494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C22341D17EB7C4000BCA494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TZShortKit/TZShortKit-Prefix.pch";
+				INFOPLIST_FILE = "TZShortKit/TZShortKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5C22341E17EB7C4000BCA494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TZShortKit/TZShortKit-Prefix.pch";
+				INFOPLIST_FILE = "TZShortKit/TZShortKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5C22342017EB7C4000BCA494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TZShortKit.app/TZShortKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TZShortKit/TZShortKit-Prefix.pch";
+				INFOPLIST_FILE = "TZShortKitTests/TZShortKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5C22342117EB7C4000BCA494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TZShortKit.app/TZShortKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TZShortKit/TZShortKit-Prefix.pch";
+				INFOPLIST_FILE = "TZShortKitTests/TZShortKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C2233E517EB7C3F00BCA494 /* Build configuration list for PBXProject "TZShortKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C22341A17EB7C4000BCA494 /* Debug */,
+				5C22341B17EB7C4000BCA494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C22341C17EB7C4000BCA494 /* Build configuration list for PBXNativeTarget "TZShortKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C22341D17EB7C4000BCA494 /* Debug */,
+				5C22341E17EB7C4000BCA494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5C22341F17EB7C4000BCA494 /* Build configuration list for PBXNativeTarget "TZShortKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C22342017EB7C4000BCA494 /* Debug */,
+				5C22342117EB7C4000BCA494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C2233E217EB7C3F00BCA494 /* Project object */;
+}
