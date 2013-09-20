@@ -1,0 +1,20 @@
+Pod::Spec.new do |s|
+  s.name         = "TZShortKit"
+  s.version      = "0.0.1"
+  s.summary      = "Shortcut to some properties to complement MALazykit (https://github.com/marlonandrade/malazykit)"
+  s.description  = <<-DESC
+                    Shortcuts for long properties for lazy people
+                    TZShortKit shortens things as `self.view.frame.size.width` -> `self.view.width`
+                   DESC
+  s.homepage     = "https://github.com/tadeuzagallo/TZShortKit"
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.author       = { "Tadeu Zagallo" => "tadeuzagallo@gmail.com" }
+  s.source       = { 
+    :git => "https://github.com/tadeuzagallo/TZShortKit.git",
+    :tag => '0.0.1'
+  }
+  s.platform     = :ios
+  s.ios.deployment_target = '5.0'
+  s.requires_arc = true
+  s.source_files = 'TZShortKit/**/*.{h,m}'
+end

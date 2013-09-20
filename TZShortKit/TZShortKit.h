@@ -9,6 +9,7 @@
 #ifndef TZShortKit_TZShortKit_h
 #define TZShortKit_TZShortKit_h
 
+#import "UIButton+TZShortKit.h"
 #import "UIImage+TZShortKit.h"
 #import "UIView+TZShortKit.h"
 

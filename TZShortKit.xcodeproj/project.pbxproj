@@ -23,6 +23,7 @@
 		5C22343317EB7CBC00BCA494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C22342B17EB7CBC00BCA494 /* InfoPlist.strings */; };
 		5C22343A17EB7D0400BCA494 /* UIView+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C22343917EB7D0400BCA494 /* UIView+TZShortKit.m */; };
 		5C22343D17EB7D0F00BCA494 /* UIImage+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */; };
+		5CF0203217EC99E800B3DBCD /* UIButton+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0203117EC99E800B3DBCD /* UIButton+TZShortKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		5C22343917EB7D0400BCA494 /* UIView+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TZShortKit.m"; sourceTree = "<group>"; };
 		5C22343B17EB7D0F00BCA494 /* UIImage+TZShortKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TZShortKit.h"; sourceTree = "<group>"; };
 		5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TZShortKit.m"; sourceTree = "<group>"; };
+		5CF0203017EC99E800B3DBCD /* UIButton+TZShortKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TZShortKit.h"; sourceTree = "<group>"; };
+		5CF0203117EC99E800B3DBCD /* UIButton+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TZShortKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 		5C22343617EB7CCA00BCA494 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				5CF0203017EC99E800B3DBCD /* UIButton+TZShortKit.h */,
+				5CF0203117EC99E800B3DBCD /* UIButton+TZShortKit.m */,
 				5C22343B17EB7D0F00BCA494 /* UIImage+TZShortKit.h */,
 				5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */,
 				5C22343817EB7D0400BCA494 /* UIView+TZShortKit.h */,
@@ -299,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C22342E17EB7CBC00BCA494 /* main.m in Sources */,
+				5CF0203217EC99E800B3DBCD /* UIButton+TZShortKit.m in Sources */,
 				5C22342F17EB7CBC00BCA494 /* TZAppDelegate.m in Sources */,
 				5C22343A17EB7D0400BCA494 /* UIView+TZShortKit.m in Sources */,
 				5C22343D17EB7D0F00BCA494 /* UIImage+TZShortKit.m in Sources */,
@@ -476,6 +482,7 @@
 				5C22341E17EB7C4000BCA494 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C22341F17EB7C4000BCA494 /* Build configuration list for PBXNativeTarget "TZShortKitTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +491,7 @@
 				5C22342117EB7C4000BCA494 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
