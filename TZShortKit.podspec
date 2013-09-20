@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "TZShortKit"
   s.version      = "0.0.1"
-  s.summary      = "Shortcut to some properties to complement MALazykit (https://github.com/marlonandrade/malazykit)"
+  s.summary      = "iOS library of shortcuts for long properties"
   s.description  = <<-DESC
-                    Shortcuts for long properties for lazy people
+                    ObjC library of shortcuts for long properties
                     TZShortKit shortens things as `self.view.frame.size.width` -> `self.view.width`
                    DESC
   s.homepage     = "https://github.com/tadeuzagallo/TZShortKit"
