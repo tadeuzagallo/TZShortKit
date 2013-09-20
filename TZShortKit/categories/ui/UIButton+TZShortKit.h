@@ -11,6 +11,6 @@
 @interface UIButton (TZShortKit)
 
 - (void)setImageNamed:(NSString *)imageName forState:(UIControlState)state;
-- (void)setBackgroundImageNamed:(NSString *)imageName forState:(UIControlState)state
+- (void)setBackgroundImageNamed:(NSString *)imageName forState:(UIControlState)state;
 
 @end
