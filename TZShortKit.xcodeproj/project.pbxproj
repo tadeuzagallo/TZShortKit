@@ -24,6 +24,7 @@
 		5C22343A17EB7D0400BCA494 /* UIView+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C22343917EB7D0400BCA494 /* UIView+TZShortKit.m */; };
 		5C22343D17EB7D0F00BCA494 /* UIImage+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */; };
 		5CAC698F17F1ED5C001E6DB8 /* NSString+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAC698E17F1ED5C001E6DB8 /* NSString+TZShortKit.m */; };
+		5CAC699417F1EEA2001E6DB8 /* DeviceHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAC699317F1EEA2001E6DB8 /* DeviceHelpers.m */; };
 		5CF0203217EC99E800B3DBCD /* UIButton+TZShortKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF0203117EC99E800B3DBCD /* UIButton+TZShortKit.m */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,9 @@
 		5CAC698B17F1ECC7001E6DB8 /* TZCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZCategories.h; sourceTree = "<group>"; };
 		5CAC698D17F1ED5C001E6DB8 /* NSString+TZShortKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TZShortKit.h"; sourceTree = "<group>"; };
 		5CAC698E17F1ED5C001E6DB8 /* NSString+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TZShortKit.m"; sourceTree = "<group>"; };
+		5CAC699117F1EE79001E6DB8 /* TZUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZUtils.h; sourceTree = "<group>"; };
+		5CAC699317F1EEA2001E6DB8 /* DeviceHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceHelpers.m; sourceTree = "<group>"; };
+		5CAC699517F1EEAC001E6DB8 /* DeviceHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceHelpers.h; sourceTree = "<group>"; };
 		5CF0203017EC99E800B3DBCD /* UIButton+TZShortKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TZShortKit.h"; sourceTree = "<group>"; };
 		5CF0203117EC99E800B3DBCD /* UIButton+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TZShortKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +134,7 @@
 			children = (
 				5C22343717EB7CD900BCA494 /* TZShortKit.h */,
 				5C22343517EB7CCA00BCA494 /* categories */,
+				5CAC699017F1EE5D001E6DB8 /* utils */,
 			);
 			path = TZShortKit;
 			sourceTree = "<group>";
@@ -206,6 +211,24 @@
 				5CAC698E17F1ED5C001E6DB8 /* NSString+TZShortKit.m */,
 			);
 			path = ns;
+			sourceTree = "<group>";
+		};
+		5CAC699017F1EE5D001E6DB8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				5CAC699117F1EE79001E6DB8 /* TZUtils.h */,
+				5CAC699217F1EE93001E6DB8 /* helpers */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		5CAC699217F1EE93001E6DB8 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5CAC699517F1EEAC001E6DB8 /* DeviceHelpers.h */,
+				5CAC699317F1EEA2001E6DB8 /* DeviceHelpers.m */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAC699417F1EEA2001E6DB8 /* DeviceHelpers.m in Sources */,
 				5C22342E17EB7CBC00BCA494 /* main.m in Sources */,
 				5CAC698F17F1ED5C001E6DB8 /* NSString+TZShortKit.m in Sources */,
 				5CF0203217EC99E800B3DBCD /* UIButton+TZShortKit.m in Sources */,

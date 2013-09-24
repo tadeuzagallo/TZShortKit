@@ -10,6 +10,6 @@
 #define TZShortKit_TZShortKit_h
 
 #import "TZCategories.h"
-
+#import "TZUtils.h"
 
 #endif
