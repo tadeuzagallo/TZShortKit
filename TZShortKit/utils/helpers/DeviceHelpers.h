@@ -9,7 +9,12 @@
 #ifndef TZShortKit_DeviceHelpers_h
 #define TZShortKit_DeviceHelpers_h
 
-extern inline BOOL IsRetinaScreen(void);
-extern inline BOOL IsRetina4Screen(void);
+static inline BOOL IsRetinaScreen(void) {
+    return [[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2.f;
+}
+
+static inline BOOL IsRetina4Screen(void) {
+    return IsRetinaScreen() && [UIScreen mainScreen].bounds.size.height == 568.f;
+}
 
 #endif
