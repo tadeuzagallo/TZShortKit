@@ -10,8 +10,8 @@
 
 @interface UIView (TZShortKit)
 
-@property (nonatomic) CGFloat x, y, width, height;
-@property (nonatomic) CGPoint origin;
-@property (nonatomic) CGSize size;
+@property (nonatomic) CGFloat x, y, width, height, boundsX, boundsY, boundsHeight, boundsWidth;
+@property (nonatomic) CGPoint origin, boundsOrigin;
+@property (nonatomic) CGSize size, boundsSize;
 
 @end

@@ -48,6 +48,42 @@
     self.frame = frame;
 }
 
+- (void)setBoundX:(CGFloat)x {
+    CGRect frame = self.bounds;
+    frame.origin.x = x;
+    self.bounds = frame;
+}
+
+- (void)setBoundY:(CGFloat)y {
+    CGRect frame = self.bounds;
+    frame.origin.y = y;
+    self.bounds = frame;
+}
+
+- (void)setBoundWidth:(CGFloat)width {
+    CGRect frame = self.bounds;
+    frame.size.width = width;
+    self.bounds = frame;
+}
+
+- (void)setBoundHeight:(CGFloat)height {
+    CGRect frame = self.bounds;
+    frame.size.height = height;
+    self.bounds = frame;
+}
+
+- (void)setBoundOrigin:(CGPoint)origin {
+    CGRect frame = self.bounds;
+    frame.origin = origin;
+    self.bounds = frame;
+}
+
+- (void)setBoundSize:(CGSize)size {
+    CGRect frame = self.bounds;
+    frame.size = size;
+    self.bounds = frame;
+}
+
 #pragma mark - Getters
 
 - (CGFloat)x {
@@ -72,6 +108,30 @@
 
 - (CGSize)size {
     return self.frame.size;
+}
+
+- (CGFloat)boundsX {
+    return self.bounds.origin.x;
+}
+
+- (CGFloat)boundsY {
+    return self.bounds.origin.y;
+}
+
+- (CGFloat)boundsWidth {
+    return self.bounds.size.width;
+}
+
+-(CGFloat)boundsHeight {
+    return self.bounds.size.height;
+}
+
+- (CGPoint)boundsOrigin {
+    return self.bounds.origin;
+}
+
+- (CGSize)boundsSize {
+    return self.bounds.size;
 }
 
 @end

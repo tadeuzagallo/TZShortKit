@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>613C5CAD-5007-46BE-AF95-FC4F230C79C9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TZShortKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C28BEAEB-8997-4589-84F8-336E938E335C</key>
+		<string>ssh://github.com/tadeuzagallo/TZShortKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TZShortKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C28BEAEB-8997-4589-84F8-336E938E335C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/tadeuzagallo/TZShortKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C28BEAEB-8997-4589-84F8-336E938E335C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C28BEAEB-8997-4589-84F8-336E938E335C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TZShortKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
