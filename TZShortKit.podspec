@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
   s.author       = { "Tadeu Zagallo" => "tadeuzagallo@gmail.com" }
   s.source       = { 
     :git => "https://github.com/tadeuzagallo/TZShortKit.git",
-    :branch => 'development'
   }
   s.platform     = :ios
   s.ios.deployment_target = '5.0'
