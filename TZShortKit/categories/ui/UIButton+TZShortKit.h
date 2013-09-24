@@ -10,6 +10,17 @@
 
 @interface UIButton (TZShortKit)
 
+@property (nonatomic) UIImage *image, *backgroundImage,
+                              *selectedImage, *selectedBackgroundImage;
+
+@property (nonatomic) NSString *title, *selectedTitle;
+
+- (void)setImageName:(NSString *)imageName;
+- (void)setBackgroundImageName:(NSString *)backgroundImageName;
+
+- (void)setSelectedImageName:(NSString *)imageName;
+- (void)setSelectedBackgroundImageName:(NSString *)backgroundImageName;
+
 - (void)setImageNamed:(NSString *)imageName forState:(UIControlState)state;
 - (void)setBackgroundImageNamed:(NSString *)imageName forState:(UIControlState)state;
 
