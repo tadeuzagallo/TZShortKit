@@ -17,4 +17,24 @@ static inline BOOL IsRetina4Screen(void) {
     return IsRetinaScreen() && [UIScreen mainScreen].bounds.size.height == 568.f;
 }
 
+static inline CGFloat iOSVersion(void) {
+    return [[[UIDevice currentDevice] systemVersion] floatValue];
+}
+
+static inline BOOL iOSVersionIsAtLeast(CGFloat version) {
+    return iOSVersion() >= version;
+}
+
+static inline BOOL iOSVersionIsGreaterThan(CGFloat version) {
+    return iOSVersion() > version;
+}
+
+static inline BOOL iOSVersionIsAtMost(CGFloat version) {
+    return iOSVersion() <= version;
+}
+
+static inline BOOL iOSVersionIsLessThan(CGFloat version) {
+    return iOSVersion() < version;
+}
+
 #endif
