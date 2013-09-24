@@ -48,37 +48,37 @@
     self.frame = frame;
 }
 
-- (void)setBoundX:(CGFloat)x {
+- (void)setBoundsX:(CGFloat)x {
     CGRect frame = self.bounds;
     frame.origin.x = x;
     self.bounds = frame;
 }
 
-- (void)setBoundY:(CGFloat)y {
+- (void)setBoundsY:(CGFloat)y {
     CGRect frame = self.bounds;
     frame.origin.y = y;
     self.bounds = frame;
 }
 
-- (void)setBoundWidth:(CGFloat)width {
+- (void)setBoundsWidth:(CGFloat)width {
     CGRect frame = self.bounds;
     frame.size.width = width;
     self.bounds = frame;
 }
 
-- (void)setBoundHeight:(CGFloat)height {
+- (void)setBoundsHeight:(CGFloat)height {
     CGRect frame = self.bounds;
     frame.size.height = height;
     self.bounds = frame;
 }
 
-- (void)setBoundOrigin:(CGPoint)origin {
+- (void)setBoundsOrigin:(CGPoint)origin {
     CGRect frame = self.bounds;
     frame.origin = origin;
     self.bounds = frame;
 }
 
-- (void)setBoundSize:(CGSize)size {
+- (void)setBoundsSize:(CGSize)size {
     CGRect frame = self.bounds;
     frame.size = size;
     self.bounds = frame;
