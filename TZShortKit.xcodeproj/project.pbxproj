@@ -61,6 +61,7 @@
 		5C22343917EB7D0400BCA494 /* UIView+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TZShortKit.m"; sourceTree = "<group>"; };
 		5C22343B17EB7D0F00BCA494 /* UIImage+TZShortKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TZShortKit.h"; sourceTree = "<group>"; };
 		5C22343C17EB7D0F00BCA494 /* UIImage+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TZShortKit.m"; sourceTree = "<group>"; };
+		5CAC698B17F1ECC7001E6DB8 /* TZCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TZCategories.h; sourceTree = "<group>"; };
 		5CF0203017EC99E800B3DBCD /* UIButton+TZShortKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TZShortKit.h"; sourceTree = "<group>"; };
 		5CF0203117EC99E800B3DBCD /* UIButton+TZShortKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TZShortKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +176,7 @@
 		5C22343517EB7CCA00BCA494 /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				5CAC698B17F1ECC7001E6DB8 /* TZCategories.h */,
 				5C22343617EB7CCA00BCA494 /* ui */,
 			);
 			path = categories;
