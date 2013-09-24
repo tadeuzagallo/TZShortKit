@@ -9,7 +9,7 @@
 #ifndef TZShortKit_DeviceHelpers_h
 #define TZShortKit_DeviceHelpers_h
 
-extern static inline BOOL IsRetinaScreen(void);
-extern static inline BOOL IsRetina4Screen(void);
+extern inline BOOL IsRetinaScreen(void);
+extern inline BOOL IsRetina4Screen(void);
 
 #endif
