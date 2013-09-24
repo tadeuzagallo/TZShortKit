@@ -9,6 +9,6 @@
 #ifndef TZShortKit_TZUtils_h
 #define TZShortKit_TZUtils_h
 
-
+#import "DeviceHelpers.h"
 
 #endif
