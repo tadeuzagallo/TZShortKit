@@ -49,14 +49,13 @@ static inline void _TZOff(int count, NSString *key, ...) {
     }
 }
 
-#define TZTrigger(key...) _TZTrigger(PP_NARG(__VA_ARGS__), __VA_ARGS__)
+#define TZTrigger(key...) _TZTrigger(PP_NARG(key), key)
 
 
 static inline void _TZTrigger(int count, NSString *key, ...) {
     id object = nil;
     
-    if (count == 1) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:key object:nil];
+    if (count > 1) {
         va_list ap;
         va_start(ap, key);
         object = va_arg(ap, id);
