@@ -10,5 +10,6 @@
 #define TZShortKit_TZUtils_h
 
 #import "DeviceHelpers.h"
+#import "NotificationHelpers.h"
 
 #endif
