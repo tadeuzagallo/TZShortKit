@@ -19,48 +19,48 @@ typedef void(^NotificationBlock)(NSNotification *);
 
 + (instancetype)sharedHelper;
 
-- (void)listenFor:(NSString *)key with:(NotificationBlock)observer one:(BOOL)one;
-- (void)silence:(NSString *)key;
-- (void)silence:(NSString *)key with:(NotificationBlock)observer;
+- (void)listenFor:(NSString *)event with:(NotificationBlock)observer one:(BOOL)one;
+- (void)silence:(NSString *)event;
+- (void)silence:(NSString *)event with:(NotificationBlock)observer;
 
 @end
 
-static inline void TZOn(NSString *key, NotificationBlock observer) {
-    [[NotificationHelpers sharedHelper] listenFor:key with:observer one:NO];
+static inline void TZOn(NSString *event, NotificationBlock observer) {
+    [[NotificationHelpers sharedHelper] listenFor:event with:observer one:NO];
 }
 
-static inline void TZOne(NSString *key, NotificationBlock observer) {
-    [[NotificationHelpers sharedHelper] listenFor:key with:observer one:YES];
+static inline void TZOne(NSString *event, NotificationBlock observer) {
+    [[NotificationHelpers sharedHelper] listenFor:event with:observer one:YES];
 }
 
-#define TZOff(key...) _TZOff(PP_NARG(key), key)
+#define TZOff(event...) _TZOff(PP_NARG(event), event)
 
-static inline void _TZOff(int count, NSString *key, ...) {
+static inline void _TZOff(int count, NSString *event, ...) {
     if (count == 1) {
         NSLog(@"No observer provided");
-        [[NotificationHelpers sharedHelper] silence:key];
+        [[NotificationHelpers sharedHelper] silence:event];
     } else {
         va_list ap;
-        va_start(ap, key);
+        va_start(ap, event);
         NotificationBlock observer = va_arg(ap, NotificationBlock);
         va_end(ap);
         NSLog(@"Observer provided: %@", observer);
-        [[NotificationHelpers sharedHelper] silence:key with:observer];
+        [[NotificationHelpers sharedHelper] silence:event with:observer];
     }
 }
 
-#define TZTrigger(key...) _TZTrigger(PP_NARG(key), key)
+#define TZTrigger(event...) _TZTrigger(PP_NARG(event), event)
 
 
-static inline void _TZTrigger(int count, NSString *key, ...) {
+static inline void _TZTrigger(int count, NSString *event, ...) {
     id object = nil;
     
     if (count > 1) {
         va_list ap;
-        va_start(ap, key);
+        va_start(ap, event);
         object = va_arg(ap, id);
         va_end(ap);
     }
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:key object:object];
+    [[NSNotificationCenter defaultCenter] postNotificationName:event object:object];
 }

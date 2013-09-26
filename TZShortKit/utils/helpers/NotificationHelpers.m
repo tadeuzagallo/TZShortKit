@@ -34,9 +34,9 @@
 #pragma mark Instance Methods
 
 - (void)_proxy:(NSNotification *)notification {
-    NSString *key = notification.name;
+    NSString *event = notification.name;
     
-    NSMutableArray *listeners = self.listeners[key];
+    NSMutableArray *listeners = self.listeners[event];
     
     for (NotificationBlock observer in listeners) {
         observer(notification);
@@ -48,7 +48,7 @@
         }
     }
     
-    self.listeners[key] = listeners;
+    self.listeners[event] = listeners;
 }
 
 #pragma mark - Public Methods
@@ -67,33 +67,33 @@
 
 #pragma mark Instance Methods
 
-- (void)listenFor:(NSString *)key with:(NotificationBlock)observer one:(BOOL)one {
-    NSMutableArray *listeners = self.listeners[key];
+- (void)listenFor:(NSString *)event with:(NotificationBlock)observer one:(BOOL)one {
+    NSMutableArray *listeners = self.listeners[event];
     
     if (!listeners) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_proxy:) name:key object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_proxy:) name:event object:nil];
         listeners = [NSMutableArray array];
     }
     
     objc_setAssociatedObject(observer, @"one", @(one), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [listeners addObject:observer];
-    self.listeners[key] = listeners;
+    self.listeners[event] = listeners;
 }
 
-- (void)silence:(NSString *)key {
-    [self.listeners removeObjectForKey:key];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:key object:nil];
+- (void)silence:(NSString *)event {
+    [self.listeners removeObjectForKey:event];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:event object:nil];
 }
 
-- (void)silence:(NSString *)key with:(NotificationBlock)observer {
-    NSMutableArray *listeners = self.listeners[key];
+- (void)silence:(NSString *)event with:(NotificationBlock)observer {
+    NSMutableArray *listeners = self.listeners[event];
     
     if (listeners.count == 1) {
-        return [self silence:key];
+        return [self silence:event];
     }
     
     [listeners removeObject:observer];
-    self.listeners[key] = listeners;
+    self.listeners[event] = listeners;
 }
 
 @end
