@@ -134,4 +134,12 @@
     return self.bounds.size;
 }
 
+#pragma mark - Custom Methods
+
+- (void)addSubviews:(NSArray *)objects {
+    for (UIView *v in objects) {
+        [self addSubview:v];
+    }
+}
+
 @end

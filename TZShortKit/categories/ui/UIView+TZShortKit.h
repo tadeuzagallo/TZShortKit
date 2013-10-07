@@ -14,4 +14,6 @@
 @property (nonatomic) CGPoint origin, boundsOrigin;
 @property (nonatomic) CGSize size, boundsSize;
 
+- (void)addSubviews:(NSArray *)objects;
+
 @end
