@@ -39,6 +39,12 @@
     NSMutableArray *listeners = self.listeners[event];
     
     for (NotificationBlock observer in listeners) {
+        id object = objc_getAssociatedObject(observer, @"object");
+        
+        if (object && notification.object != object) {
+            continue;
+        }
+        
         observer(notification);
         
         NSNumber *one = objc_getAssociatedObject(observer, @"one");
@@ -67,7 +73,7 @@
 
 #pragma mark Instance Methods
 
-- (void)listenFor:(NSString *)event with:(NotificationBlock)observer one:(BOOL)one {
+- (void)listenFor:(NSString *)event with:(NotificationBlock)observer object:(id)object one:(BOOL)one {
     NSMutableArray *listeners = self.listeners[event];
     
     if (!listeners) {
@@ -76,6 +82,7 @@
     }
     
     objc_setAssociatedObject(observer, @"one", @(one), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(observer, @"object", object, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [listeners addObject:observer];
     self.listeners[event] = listeners;
 }
