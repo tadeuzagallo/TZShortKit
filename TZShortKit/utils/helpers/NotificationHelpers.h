@@ -98,15 +98,28 @@ static inline void _TZOff(int count, NSString *event, ...) {
 #define TZTrigger(event...) _TZTrigger(PP_NARG(event), self, event)
 
 
-static inline void _TZTrigger(int count, id _self, NSString *event, ...) {
-    id object = nil;
+static inline void _TZTrigger(int count, id _self, id event, ...) {
+    id object = _self;
+    id userInfo = nil;
     
     if (count > 1) {
         va_list ap;
         va_start(ap, event);
-        object = va_arg(ap, id);
+        userInfo = va_arg(ap, id);
+        
+        if ([userInfo isKindOfClass:[NSString class]]) {
+            object = event;
+            event = userInfo;
+
+            if (count > 2) {
+                userInfo = va_arg(ap, id);
+            } else {
+                userInfo = nil;
+            }
+        }
+        
         va_end(ap);
     }
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:event object:_self userInfo:object];
+    [[NSNotificationCenter defaultCenter] postNotificationName:event object:object userInfo:userInfo];
 }
