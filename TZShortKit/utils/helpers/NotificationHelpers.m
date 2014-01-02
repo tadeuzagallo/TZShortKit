@@ -127,6 +127,7 @@
         if ([o isKindOfClass:[NotificationObject class]]) {
             if (o.target == observer && o.selector == sel) {
                 [listeners removeObject:o];
+                break;
             }
         }
     }

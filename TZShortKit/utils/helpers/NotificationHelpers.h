@@ -42,26 +42,34 @@ typedef void(^NotificationBlock)(NSNotification *);
 static inline void _TZOn(int count, BOOL one, NSString *event, ...) {
     id observer = nil,
        object = nil;
-    SEL selector;
+    NSString *selector;
     
     va_list ap;
     va_start(ap, event);
     
     if (count == 2) {
         observer = va_arg(ap, id);
+        [[NotificationHelpers sharedHelper] listenFor:event with:observer object:nil one:one];
     } else if (count == 3){
         object = va_arg(ap, id);
         observer = va_arg(ap, id);
+        if ([observer isKindOfClass:[NSString class]]) {
+            selector = (NSString *)observer;
+            observer = [[NotificationObject alloc] initWithTarget:object selector:NSSelectorFromString(selector)];
+            [[NotificationHelpers sharedHelper] listenFor:event with:observer object:nil one:one];
+        } else {
+            [[NotificationHelpers sharedHelper] listenFor:event with:observer object:object one:one];
+        }
     } else if (count == 4) {
-        object = va_arg(ap, id);
         observer = va_arg(ap, id);
-        selector = va_arg(ap, SEL);
-        observer = [[NotificationObject alloc] initWithTarget:observer selector:selector];
+        object = va_arg(ap, id);
+        selector = va_arg(ap, NSString*);
+        observer = [[NotificationObject alloc] initWithTarget:observer selector:NSSelectorFromString(selector)];
+        [[NotificationHelpers sharedHelper] listenFor:event with:observer object:object one:one];
     }
     
     va_end(ap);
     
-    [[NotificationHelpers sharedHelper] listenFor:event with:observer object:object one:one];
 }
 
 #define Off(...) TZOff(__VA_ARGS__)
@@ -74,12 +82,12 @@ static inline void _TZOff(int count, NSString *event, ...) {
     } else {
         va_list ap;
         va_start(ap, event);
-        id observer = va_arg(ap, NotificationBlock);
+        id observer = va_arg(ap, id);
         if (count == 2) {
             [[NotificationHelpers sharedHelper] silence:event with:observer];
         } else if (count == 3) {
-            SEL selector = va_arg(ap, SEL);
-            [[NotificationHelpers sharedHelper] silence:event with:observer selector:selector];
+            NSString *selector = va_arg(ap, NSString *);
+            [[NotificationHelpers sharedHelper] silence:event with:observer selector:NSSelectorFromString(selector)];
         }
         va_end(ap);
         NSLog(@"Observer provided: %@", observer);
