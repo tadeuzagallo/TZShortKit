@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TZShortKit"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "iOS library of shortcuts for long properties"
   s.description  = <<-DESC
                     ObjC library of shortcuts for long properties
@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.author       = { "Tadeu Zagallo" => "tadeuzagallo@gmail.com" }
   s.source       = { 
     :git => "https://github.com/tadeuzagallo/TZShortKit.git",
+    :tag => 'v0.1.0'
   }
   s.platform     = :ios
   s.ios.deployment_target = '5.0'
