@@ -1,19 +1,18 @@
 # TZShortKit
----
 
 Small library with a few helpers that I use daily to save up some code. 
 
 example:
 
 instead of:
-```ios
+```objc
 CGRect frame = view.frame;
 frame.size.width -= 20;
 view.frame = frame;
 ```
 
 you can write:
-```ios
+```objc
 view.frame.width -= 20;
 ```
 ## Categories provided
@@ -43,7 +42,7 @@ view.frame.width -= 20;
 ## Other helpers:
 
 * __Device helpers__
-```ios
+```objc
 BOOL IsRetinaScreen();
 BOOL IsRetina4Screen();
 CGFloat iOSVersion();
@@ -53,10 +52,25 @@ BOOL iOSVersionIsGreatherThan(CGFloat version);
 BOOL iOSVersionIsLessThan(CGFloat version);
 ```
 
-* __Notification helpers__ 
+* __Notification helpers__ _(I tried to make notifications as easy and flexible as possible, so there are a lot of optional parameters)_
+  ```objc
+  On(NSString *event[, id object], NotificationBlock block);
+  On(NSString *event[, id object], id target, NSString *selectorName);
+  ```
+  ```objc
+  Off(NSString *event[, NotificationBlock block]);
+  Off(NSString *event[, id target, NSString *selectorName]);
+  ```
+  ```objc
+  Trigger([id sender,] NSString *event [, NSDictionary *userInfo]);
+  ```
+  * Clarifying notification parameters:
+  The second `On` method could be originally written as:
 
-```ios
-On(NSString *event[, id subject], NotificationBlock block);
-Off(NSString *event[, NotificationBlock block]);
-Trigger(NSString *event[, NSDictionary *userInfo]);
-```
+  ```objc
+  [[NSNotificationCenter defaultCenter] addObserver:target
+                                        selector:NSSelectorFromString(selectorName)
+                                        name:event
+                                        object:object];
+  ```
+  Alternatively you may substitute the target and selector for a block...
