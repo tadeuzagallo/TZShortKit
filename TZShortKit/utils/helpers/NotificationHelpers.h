@@ -25,9 +25,12 @@ typedef void(^NotificationBlock)(NSNotification *);
 
 @end
 
+#define One(...) TZOne(__VA_ARGS__)
 #define TZOne(event...) _TZOn(PP_NARG(event), YES, event)
 
+#define On(...) TZOn(__VA_ARGS__)
 #define TZOn(event...) _TZOn(PP_NARG(event), NO, event)
+
 
 static inline void _TZOn(int count, BOOL one, NSString *event, ...) {
     id observer = nil,
@@ -48,6 +51,7 @@ static inline void _TZOn(int count, BOOL one, NSString *event, ...) {
     [[NotificationHelpers sharedHelper] listenFor:event with:observer object:object one:NO];
 }
 
+#define Off(...) TZOff(__VA_ARGS__)
 #define TZOff(event...) _TZOff(PP_NARG(event), event)
 
 static inline void _TZOff(int count, NSString *event, ...) {
