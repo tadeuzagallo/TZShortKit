@@ -18,6 +18,17 @@
 
 @end
 
+@implementation NotificationObject
+- (id)initWithTarget:(id)target selector:(SEL)sel {
+    self = [super init];
+    if (self) {
+        self.target = target;
+        self.selector = sel;
+    }
+    return self;
+}
+@end
+
 @implementation NotificationHelpers
 
 #pragma mark - Getters
@@ -38,14 +49,19 @@
     
     NSMutableArray *listeners = self.listeners[event];
     
-    for (NotificationBlock observer in listeners) {
+    for (id observer in listeners) {
         id object = objc_getAssociatedObject(observer, @"object");
         
         if (object && notification.object != object) {
             continue;
         }
         
-        observer(notification);
+        if ([observer isKindOfClass:NSClassFromString(@"NSBlock")]) {
+            ((NotificationBlock)observer)(notification);
+        } else if ([observer isKindOfClass:[NotificationObject class]]) {
+            NotificationObject *o = observer;
+            [o.target performSelector:o.selector withObject:notification];
+        }
         
         NSNumber *one = objc_getAssociatedObject(observer, @"one");
         
@@ -73,7 +89,7 @@
 
 #pragma mark Instance Methods
 
-- (void)listenFor:(NSString *)event with:(NotificationBlock)observer object:(id)object one:(BOOL)one {
+- (void)listenFor:(NSString *)event with:(id)observer object:(id)object one:(BOOL)one {
     NSMutableArray *listeners = self.listeners[event];
     
     if (!listeners) {
@@ -92,15 +108,34 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:event object:nil];
 }
 
-- (void)silence:(NSString *)event with:(NotificationBlock)observer {
+- (void)silence:(NSString *)event with:(id)observer {
     NSMutableArray *listeners = self.listeners[event];
     
-    if (listeners.count == 1) {
-        return [self silence:event];
+    [listeners removeObject:observer];
+    
+    if (!listeners.count) {
+        [self silence:event];
+    } else {
+        self.listeners[event] = listeners;
+    }
+}
+
+- (void)silence:(NSString *)event with:(id)observer selector:(SEL)sel {
+    NSMutableArray *listeners = self.listeners[event];
+    
+    for (NotificationObject *o in listeners) {
+        if ([o isKindOfClass:[NotificationObject class]]) {
+            if (o.target == observer && o.selector == sel) {
+                [listeners removeObject:o];
+            }
+        }
     }
     
-    [listeners removeObject:observer];
-    self.listeners[event] = listeners;
+    if (!listeners.count) {
+        [self silence:event];
+    } else {
+        self.listeners[event] = listeners;
+    }
 }
 
 @end
